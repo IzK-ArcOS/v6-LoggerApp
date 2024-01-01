@@ -1,3 +1,14 @@
-window#appTemplate { /* Rename appTemplate to the ID of the app */
-  color: #f0f;
+@import url("./sidebar.css");
+
+#LoggerApp {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+#LoggerApp > div.body {
+  padding: 0;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
 }
