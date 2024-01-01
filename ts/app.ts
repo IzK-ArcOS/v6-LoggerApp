@@ -1,23 +1,23 @@
-import { DefaultIcon } from "$ts/images/apps";
-import { Runtime } from "./runtime";
-import AppSvelte from "../App.svelte";
+import { LoggerIcon } from "$ts/images/apps";
 import { App } from "$types/app";
+import AppSvelte from "../App.svelte";
+import { LoggerRuntime } from "./runtime";
 
-export const app: App = {
+export const LoggerApp: App = {
   metadata: {
-    name: "App Template",
-    description: "This is an app template",
+    name: "Logging",
+    description: "View ArcOS Logs",
     author: "The ArcOS Team",
-    version: "0.0.0",
-    icon: DefaultIcon
+    version: "2.0.0",
+    icon: LoggerIcon
   },
-  runtime: Runtime,
+  runtime: LoggerRuntime,
   content: AppSvelte,
-  id: "appTemplate",
-  size: { w: 0, h: 0 },
-  minSize: { w: 0, h: 0 },
-  maxSize: { w: 0, h: 0 },
-  pos: { x: 0, y: 0 },
+  id: "LoggerApp",
+  size: { w: 1000, h: NaN },
+  minSize: { w: 1000, h: 600 },
+  maxSize: { w: 1000, h: 610 },
+  pos: { x: 200, y: 60 },
   state: {
     minimized: false,
     maximized: false,
@@ -26,8 +26,8 @@ export const app: App = {
     resizable: false
   },
   controls: {
-    minimize: false,
+    minimize: true,
     maximize: false,
-    close: false
+    close: true
   }
 }
