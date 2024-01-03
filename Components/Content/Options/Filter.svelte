@@ -1,7 +1,29 @@
+<script lang="ts">
+  import {
+    FilterCaptions,
+    FilterLevels,
+    LogItemIcons,
+  } from "$apps/LoggerApp/ts/store";
+  import { FilterLevel } from "$apps/LoggerApp/ts/types";
+
+  export let selectedLevel: FilterLevel;
+</script>
+
 <div class="filter-options">
-  <button class="material-icons-round none">select_all</button>
-  <button class="info">Info</button>
-  <button class="info">Warning</button>
-  <button class="info">Error</button>
-  <button class="info">Critical</button>
+  <button
+    class="material-icons-round none"
+    on:click={() => (selectedLevel = "all")}
+    class:suggested={selectedLevel == "all"}
+  >
+    select_all
+  </button>
+  {#each FilterLevels as level}
+    <button
+      class="option level-{LogItemIcons[level]}"
+      on:click={() => (selectedLevel = level)}
+      class:suggested={selectedLevel == level}
+    >
+      {FilterCaptions.get(level)}
+    </button>
+  {/each}
 </div>

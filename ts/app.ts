@@ -14,20 +14,20 @@ export const LoggerApp: App = {
   runtime: LoggerRuntime,
   content: AppSvelte,
   id: "LoggerApp",
-  size: { w: 1000, h: NaN },
+  size: { w: 1000, h: 600 },
   minSize: { w: 1000, h: 600 },
-  maxSize: { w: 1000, h: 610 },
+  maxSize: { w: 1300, h: 900 },
   pos: { x: 200, y: 60 },
   state: {
     minimized: false,
     maximized: false,
     headless: false,
     fullscreen: false,
-    resizable: false
+    resizable: true
   },
   controls: {
     minimize: true,
-    maximize: false,
+    maximize: true,
     close: true
   }
 }

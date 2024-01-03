@@ -1,8 +1,8 @@
 <script lang="ts">
+  import { CurrentSource } from "$apps/LoggerApp/ts/types";
   import { FolderIcon } from "$ts/images/filesystem";
-  import { ReadableStore } from "$types/writable";
 
-  export let currentSource: ReadableStore<string>;
+  export let currentSource: CurrentSource;
   export let source: string;
 
   function select() {
@@ -14,6 +14,7 @@
   class="source-option"
   class:selected={$currentSource == source}
   on:click={select}
+  title={source}
 >
   <img src={FolderIcon} alt="" />
   <span>{source}</span>

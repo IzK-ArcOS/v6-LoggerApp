@@ -1,0 +1,39 @@
+@import url("./item/color.css");
+
+#LoggerApp div.log-list-wrapper .source {
+  padding-left: 10px !important;
+  white-space: nowrap;
+  max-width: 150px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#LoggerApp div.log-list-wrapper .message span {
+  margin: 9px 0;
+  display: block;
+  white-space: nowrap;
+}
+
+#LoggerApp div.log-list-wrapper .icon {
+  width: 26px;
+  padding-left: 10px;
+  font-size: 16px;
+  font-family: "Material Icons Round";
+}
+
+#LoggerApp div.log-list-wrapper td:not(.icon),
+#LoggerApp div.log-list-wrapper th:not(.icon) {
+  padding: 0;
+  padding-left: 30px;
+}
+
+#LoggerApp div.log-list-wrapper tr {
+  height: 37px;
+  border-bottom: var(--button-hover-bg) 1px solid;
+  transition: all 0.3s, background-color 0.5s;
+}
+
+#LoggerApp div.log-list-wrapper tr.highlight {
+  background-color: var(--accent-transparent);
+  transition: none;
+}

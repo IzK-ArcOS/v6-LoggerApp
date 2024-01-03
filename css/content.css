@@ -1,0 +1,6 @@
+@import url("./content/options.css");
+@import url("./content/list.css");
+
+#LoggerApp div.main-content {
+  width: calc(100% - 250px);
+}

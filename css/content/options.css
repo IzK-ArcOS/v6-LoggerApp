@@ -1,0 +1,78 @@
+#LoggerApp div.options {
+  display: flex;
+  width: 100%;
+  height: 70px;
+  padding: 20px;
+  align-items: center;
+  gap: 10px;
+  max-width: inherit;
+  flex-basis: auto;
+  flex-wrap: wrap;
+}
+
+#LoggerApp div.options div.current-source {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  background-color: var(--button-bg);
+  border-radius: 6px;
+  height: 30px;
+  max-width: 350px;
+  max-width: calc(100% - 350px);
+  flex-grow: 1;
+}
+
+#LoggerApp div.options div.sep {
+  width: 1px;
+  height: 20px;
+  background-color: var(--button-hover-bg);
+}
+
+#LoggerApp div.options div.filter-options {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: end;
+}
+
+#LoggerApp div.options div.filter-options button {
+  padding: 0 15px !important;
+  margin: 0;
+  height: 30px;
+  min-width: unset !important;
+}
+
+#LoggerApp div.options div.filter-options button.none {
+  padding: 0 !important;
+  width: 30px;
+  font-size: 20px;
+}
+
+#LoggerApp div.options div.filter-options button.suggested:not(.none) {
+  color: var(--win-bg);
+}
+
+#LoggerApp div.options div.filter-options button.suggested.level-info {
+  --accent-light: var(--clr-blue-fg);
+  --accent-lighter: var(--clr-blue-fg);
+  --accent-darkest: var(--clr-blue-bg);
+}
+
+#LoggerApp div.options div.filter-options button.suggested.level-warning {
+  --accent-light: var(--clr-orange-fg);
+  --accent-lighter: var(--clr-orange-fg);
+  --accent-darkest: var(--clr-orange-bg);
+}
+
+#LoggerApp div.options div.filter-options button.suggested.level-error {
+  --accent-light: var(--clr-red-fg);
+  --accent-lighter: var(--clr-red-fg);
+  --accent-darkest: var(--clr-red-bg);
+}
+
+#LoggerApp div.options div.filter-options button.suggested.level-report {
+  --accent-light: var(--clr-aqua-fg);
+  --accent-lighter: var(--clr-aqua-fg);
+  --accent-darkest: var(--clr-aqua-bg);
+}

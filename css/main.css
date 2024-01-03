@@ -1,4 +1,5 @@
 @import url("./sidebar.css");
+@import url("./content.css");
 
 #LoggerApp {
   display: flex;
@@ -10,5 +11,5 @@
   padding: 0;
   flex-grow: 1;
   display: flex;
-  flex-direction: column;
+  overflow: hidden;
 }

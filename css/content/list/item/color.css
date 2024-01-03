@@ -1,0 +1,15 @@
+#LoggerApp tr.log-item .icon-info {
+  color: var(--clr-blue-fg);
+}
+
+#LoggerApp tr.log-item .icon-warning {
+  color: var(--clr-orange-fg);
+}
+
+#LoggerApp tr.log-item .icon-error {
+  color: var(--clr-red-fg);
+}
+
+#LoggerApp tr.log-item .icon-report {
+  color: var(--clr-aqua-fg);
+}

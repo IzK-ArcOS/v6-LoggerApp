@@ -1,0 +1,20 @@
+@import url("./list/item.css");
+@import url("./list/head.css");
+
+#LoggerApp div.log-list-wrapper {
+  width: 100%;
+  height: calc(100% - 70px);
+  flex-grow: 1;
+  padding: 20px;
+  padding-top: 0;
+  overflow-y: scroll;
+}
+
+#LoggerApp div.log-list-wrapper table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#LoggerApp div.log-list-wrapper table * {
+  vertical-align: middle;
+}
