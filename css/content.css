@@ -3,4 +3,8 @@
 
 #LoggerApp div.main-content {
   width: calc(100% - 250px);
+  background-color: var(--win-bg);
+  border-top: var(--win-border);
+  border-left: var(--win-border);
+  border-top-left-radius: 10px;
 }

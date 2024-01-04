@@ -29,5 +29,6 @@ export const LoggerApp: App = {
     minimize: true,
     maximize: true,
     close: true
-  }
+  },
+  glass: true
 }
