@@ -18,7 +18,7 @@
 
     const [level, source] = runtime.process.args;
 
-    if (typeof level !== "number" || typeof source !== "string") return;
+    if (!level || typeof source !== "string") return;
 
     selectedLevel = level as FilterLevel;
     currentSource.set(source);
