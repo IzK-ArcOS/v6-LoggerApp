@@ -1,3 +1,5 @@
+import { ErrorIcon, InfoIcon, WarningIcon } from "$ts/images/dialog";
+import { BugReportIcon } from "$ts/images/general";
 import { LogLevel } from "$types/console";
 import { FilterLevel } from "./types";
 
@@ -16,8 +18,8 @@ export const FilterCaptions: Map<"all" | LogLevel, string> = new Map([
 ]);
 
 export const LogItemIcons: Record<LogLevel, string> = {
-  [LogLevel.critical]: "report",
-  [LogLevel.error]: "error",
-  [LogLevel.warn]: "warning",
-  [LogLevel.info]: "info",
+  [LogLevel.critical]: BugReportIcon,
+  [LogLevel.error]: ErrorIcon,
+  [LogLevel.warn]: WarningIcon,
+  [LogLevel.info]: InfoIcon,
 }
