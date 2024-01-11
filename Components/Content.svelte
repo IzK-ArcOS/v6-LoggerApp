@@ -12,6 +12,14 @@
   let selectedLevel: FilterLevel = "all";
 
   onMount(() => {
+    runtime.process.handler.dispatch.subscribe<string>(
+      runtime.pid,
+      "change-source",
+      (source) => {
+        $currentSource = source;
+      }
+    );
+
     const args = runtime.process.args;
 
     if (args.length < 2) return;
