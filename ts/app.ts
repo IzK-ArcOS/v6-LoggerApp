@@ -30,5 +30,6 @@ export const LoggerApp: App = {
     maximize: true,
     close: true
   },
-  glass: true
+  glass: true,
+  elevated: true
 }
