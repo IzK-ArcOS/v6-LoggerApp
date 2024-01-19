@@ -9,7 +9,8 @@ export const LoggerApp: App = {
     description: "View ArcOS Logs",
     author: "The ArcOS Team",
     version: "2.0.0",
-    icon: LoggerIcon
+    icon: LoggerIcon,
+    appGroup: "systemTools"
   },
   runtime: LoggerRuntime,
   content: AppSvelte,
