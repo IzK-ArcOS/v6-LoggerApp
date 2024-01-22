@@ -11,12 +11,12 @@ export class LoggerRuntime extends AppRuntime {
   constructor(app: App, mutator: AppMutator, process: Process) {
     super(app, mutator, process);
 
-    this.updateGroups(mutator);
+    this.updateGroups();
 
-    LogStore.subscribe(() => this.updateGroups(mutator))
+    LogStore.subscribe(() => this.updateGroups())
   }
 
-  public updateGroups(mutator: AppMutator) {
+  public updateGroups() {
     const groupsStore = this.groups.get();
     const groups = collectLogsBySource(true);
     const entries = Object.entries(groups);
@@ -25,11 +25,7 @@ export class LoggerRuntime extends AppRuntime {
       groupsStore.set(source, items);
     }
 
-    mutator.update((v) => {
-      v.metadata.name = `Logging - ${LogStore.get().length} items`;
-      return v;
-    })
-
+    this.setWindowTitle(`${LogStore.get().length} items`, true)
     this.groups.set(groupsStore);
   }
 }

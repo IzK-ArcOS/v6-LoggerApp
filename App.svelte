@@ -1,25 +1,19 @@
 <script lang="ts">
   import { Store } from "$ts/writable";
-  import { onMount } from "svelte";
   import Content from "./Components/Content.svelte";
   import SideBar from "./Components/SideBar.svelte";
   import "./css/main.css";
   import { LoggerRuntime } from "./ts/runtime";
-  import { CurrentSource, GroupedBySource } from "./ts/types";
+  import { CurrentSource } from "./ts/types";
 
   export let runtime: LoggerRuntime;
 
-  let store: GroupedBySource = new Map([]);
-  let currentSource: CurrentSource = Store("*");
+  const { groups: store } = runtime;
 
-  onMount(() => {
-    runtime.groups.subscribe((v) => {
-      store = v;
-    });
-  });
+  let currentSource: CurrentSource = Store("*");
 </script>
 
 {#if store && runtime}
-  <SideBar {store} {currentSource} />
+  <SideBar store={$store} {currentSource} />
   <Content {currentSource} {runtime} />
 {/if}
