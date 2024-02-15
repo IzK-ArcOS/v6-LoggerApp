@@ -3,7 +3,7 @@
 
 #LoggerApp div.log-list-wrapper {
   width: 100%;
-  height: calc(100% - 70px);
+  height: calc(100% - 70px - var(--titlebar-height));
   flex-grow: 1;
   padding: 20px;
   padding-top: 0;

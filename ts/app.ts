@@ -10,7 +10,7 @@ export const LoggerApp: App = {
     author: "The ArcOS Team",
     version: "2.0.0",
     icon: LoggerIcon,
-    appGroup: "systemTools"
+    appGroup: "systemTools",
   },
   runtime: LoggerRuntime,
   content: AppSvelte,
@@ -22,15 +22,15 @@ export const LoggerApp: App = {
   state: {
     minimized: false,
     maximized: false,
-    headless: false,
+    headless: true,
     fullscreen: false,
-    resizable: true
+    resizable: true,
   },
   controls: {
     minimize: true,
     maximize: true,
-    close: true
+    close: true,
   },
   glass: true,
-  elevated: true
-}
+  elevated: true,
+};

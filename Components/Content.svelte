@@ -5,6 +5,7 @@
   import { FilterLevel } from "../ts/types";
   import List from "./Content/List.svelte";
   import Options from "./Content/Options.svelte";
+  import Titlebar from "$state/Desktop/Components/ProcessRenderer/Window/Titlebar.svelte";
 
   export let currentSource: ReadableStore<string>;
   export let runtime: LoggerRuntime;
@@ -12,13 +13,9 @@
   let selectedLevel: FilterLevel = "all";
 
   onMount(() => {
-    runtime.process.handler.dispatch.subscribe<string>(
-      runtime.pid,
-      "change-source",
-      (source) => {
-        $currentSource = source;
-      }
-    );
+    runtime.process.handler.dispatch.subscribe<string>(runtime.pid, "change-source", (source) => {
+      $currentSource = source;
+    });
 
     const args = runtime.process.args;
 
@@ -34,6 +31,7 @@
 </script>
 
 <div class="main-content">
+  <Titlebar pid={runtime.pid} app={runtime.appMutator} />
   <Options {currentSource} bind:selectedLevel />
   <div class="log-list-wrapper">
     <List {currentSource} {selectedLevel} />

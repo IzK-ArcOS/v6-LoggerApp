@@ -13,3 +13,7 @@
   display: flex;
   overflow: hidden;
 }
+
+#LoggerApp > div.body div.titlebar {
+  border-bottom: var(--win-border);
+}
