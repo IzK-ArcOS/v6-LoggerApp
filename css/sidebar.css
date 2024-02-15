@@ -13,7 +13,7 @@
 #LoggerApp div.sidebar button {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 15px;
   text-align: left;
   padding: 5px;
   margin: 0;
@@ -31,6 +31,7 @@
 
 #LoggerApp div.sidebar button.selected {
   background-color: var(--accent-transparent);
+  font-weight: bold;
 }
 
 #LoggerApp div.sidebar button span {
