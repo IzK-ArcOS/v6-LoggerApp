@@ -22,4 +22,4 @@ export const LogItemIcons: Record<LogLevel, string> = {
   [LogLevel.error]: ErrorIcon,
   [LogLevel.warn]: WarningIcon,
   [LogLevel.info]: InfoIcon,
-}
+};

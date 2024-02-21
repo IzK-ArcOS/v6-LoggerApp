@@ -13,7 +13,7 @@ export class LoggerRuntime extends AppRuntime {
 
     this.updateGroups();
 
-    LogStore.subscribe(() => this.updateGroups())
+    LogStore.subscribe(() => this.updateGroups());
   }
 
   public updateGroups() {
@@ -25,7 +25,7 @@ export class LoggerRuntime extends AppRuntime {
       groupsStore.set(source, items);
     }
 
-    this.setWindowTitle(`${LogStore.get().length} items`, true)
+    this.setWindowTitle(`${LogStore.get().length} items`, true);
     this.groups.set(groupsStore);
   }
 }

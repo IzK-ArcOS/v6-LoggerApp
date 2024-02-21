@@ -1,11 +1,11 @@
 <script lang="ts">
+  import Titlebar from "$state/Desktop/Components/ProcessRenderer/Window/Titlebar.svelte";
   import { ReadableStore } from "$types/writable";
   import { onMount } from "svelte";
   import { LoggerRuntime } from "../ts/runtime";
   import { FilterLevel } from "../ts/types";
   import List from "./Content/List.svelte";
   import Options from "./Content/Options.svelte";
-  import Titlebar from "$state/Desktop/Components/ProcessRenderer/Window/Titlebar.svelte";
 
   export let currentSource: ReadableStore<string>;
   export let runtime: LoggerRuntime;

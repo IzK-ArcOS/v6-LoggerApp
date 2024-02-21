@@ -1,9 +1,5 @@
 <script lang="ts">
-  import {
-    FilterCaptions,
-    FilterLevels,
-    LogItemIcons,
-  } from "$apps/LoggerApp/ts/store";
+  import { FilterCaptions, FilterLevels, LogItemIcons } from "$apps/LoggerApp/ts/store";
   import { FilterLevel } from "$apps/LoggerApp/ts/types";
 
   export let selectedLevel: FilterLevel;
