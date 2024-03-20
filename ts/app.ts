@@ -1,4 +1,5 @@
 import { LoggerIcon } from "$ts/images/apps";
+import { HelpArticles } from "$ts/stores/articles";
 import { App } from "$types/app";
 import AppSvelte from "../App.svelte";
 import { LoggerRuntime } from "./runtime";
@@ -33,4 +34,5 @@ export const LoggerApp: App = {
   },
   glass: true,
   elevated: true,
+  helpArticle: HelpArticles.logging,
 };

@@ -42,4 +42,5 @@
 
 #LoggerApp div.sidebar button img {
   height: 24px;
+  min-width: 24px;
 }
