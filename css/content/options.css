@@ -17,7 +17,7 @@
   align-items: center;
   padding: 0 10px;
   background-color: var(--button-bg);
-  border-radius: 6px;
+  border-radius: var(--button-border-rad);
   height: 30px;
   max-width: 350px;
   max-width: calc(100% - 350px);
